@@ -1,0 +1,17 @@
+fun RecursionSubset(arr: IntArray):List<List<Int>> {
+	var current = mutableListOf<Int>()
+	var result = mutableListOf<List<Int>>()
+	fun backtrack(index: Int){
+
+		if(index == arr.size){
+			result.add(current.toList())
+			return
+		}
+		current.add(arr[index])
+		backtrack(index + 1)
+		current.removeAt(current.lastIndex)
+		backtrack(index + 1)
+	}
+	backtrack(0)
+	return result
+}
