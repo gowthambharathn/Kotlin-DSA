@@ -1,0 +1,20 @@
+fun HeapBasics(){
+
+	var minheap = PriorityQueue<Int>()
+
+	var maxheap = PriorityQueue<Int>( compareByDescending {it})
+
+	//for adding element
+
+	minheap.add(5)
+	minheap.add(6)
+	minheap.add(10)
+
+	//Seeing Top Element
+
+	minheap.peek()
+
+	//Removing Top Element
+
+	minheap.poll()
+}
