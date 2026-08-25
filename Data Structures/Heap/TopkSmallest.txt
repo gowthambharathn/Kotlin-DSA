@@ -1,0 +1,11 @@
+fun topkSmallest(nums: IntArray, k: Int): List<Int>{
+
+	var heap = PriorityQueue<Int>(compareByDecending {it})
+	for(num in nums){
+		heap.add(num)
+		if(heap.size > k){
+			heap.poll()
+		}
+	}
+	return heap.toList()
+}
