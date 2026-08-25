@@ -1,0 +1,13 @@
+fun TopkLargest(arr: IntArray, k: Int): List<Int>{
+
+	var heap = PriorityQueue<Int>()
+
+	for(num in arr){
+		heap.add(num)
+		if(heap.size > k){
+			heap.poll()
+		}
+	}
+	return heap.toList()
+
+}
