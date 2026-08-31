@@ -1,4 +1,4 @@
-fun Search(arr: TreeNode, Target: Int): TreeNode?{
+fun Search(root: TreeNode, Target: Int): TreeNode?{
 
 	if(root.value == Target || root == null){
 		return root
