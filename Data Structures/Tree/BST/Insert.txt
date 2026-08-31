@@ -1,0 +1,11 @@
+fun Insert(arr: TreeNode?,value: Int): TreeNode?{
+	if(root == null){
+		return TreeNode(value)
+	}
+	if(value<root.value){
+		root.left = Insert(root.left, value)
+	}else if(value>root.value){
+		root.right = Insert(root.right, value)
+	}
+	return root
+}
