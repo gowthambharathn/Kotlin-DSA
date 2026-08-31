@@ -1,0 +1,12 @@
+fun Search(arr: TreeNode, Target: Int): TreeNode?{
+
+	if(root.value == Target || root == null){
+		return root
+	}
+
+	return if(Target<root.value){
+		Search(root.right, Target)
+	}else{
+		Search(root.left, Target)
+	}
+}
